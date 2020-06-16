@@ -1,3 +1,4 @@
+import { GalleryComponent } from './pages/gallery/gallery.component';
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,11 +13,12 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 const routes: Routes = [
   /* { path: '', redirectTo: 'landing', pathMatch: 'full' }, */
   { path: '', component: LandingComponent },
-  { path: 'home', component: ComponentsComponent },
+  { path: 'gallery', component: GalleryComponent }
+  /* { path: 'home', component: ComponentsComponent },
   { path: 'user-profile', component: ProfileComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'landing', component: LandingComponent },
-  { path: 'nucleoicons', component: NucleoiconsComponent }
+  { path: 'nucleoicons', component: NucleoiconsComponent } */
 ];
 
 @NgModule({

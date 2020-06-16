@@ -12,13 +12,16 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 import { MainBlockComponent } from './widgets/main-block/main-block.component';
-
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GalleryModule, GALLERY_CONFIG } from '@ngx-gallery/core';
+import { LightboxModule, LIGHTBOX_CONFIG } from '@ngx-gallery/lightbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
+
+
 
   ],
   imports: [
@@ -29,8 +32,23 @@ import { MainBlockComponent } from './widgets/main-block/main-block.component';
     ComponentsModule,
     ExamplesModule,
     AppRoutingModule,
+    GalleryModule,
+    LightboxModule
+
+
   ],
-  providers: [],
+  providers: [{
+    provide: GALLERY_CONFIG,
+    useValue: {
+      dots: true,
+      imageSize: 'cover'
+    }
+  }, {
+    provide: LIGHTBOX_CONFIG,
+    useValue: {
+      keyboardShortcuts: false
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
