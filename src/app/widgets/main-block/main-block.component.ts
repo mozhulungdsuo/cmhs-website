@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-block.component.css']
 })
 export class MainBlockComponent implements OnInit {
-
+  focus: any;
+  focus1: any;
   constructor() { }
 
   ngOnInit(): void {
